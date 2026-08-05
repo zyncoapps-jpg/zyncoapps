@@ -1,18 +1,18 @@
-const menuButton = document.querySelector(".menu-button");
+const button = document.querySelector(".menu-button");
 const navigation = document.querySelector(".nav-links");
 const desktopQuery = window.matchMedia("(min-width: 821px)");
 
 function closeMenu() {
-  if (!menuButton || !navigation) return;
+  if (!button || !navigation) return;
   navigation.classList.remove("open");
-  menuButton.setAttribute("aria-expanded", "false");
+  button.setAttribute("aria-expanded", "false");
   document.body.classList.remove("menu-open");
 }
 
-if (menuButton && navigation) {
-  menuButton.addEventListener("click", () => {
+if (button && navigation) {
+  button.addEventListener("click", () => {
     const isOpen = navigation.classList.toggle("open");
-    menuButton.setAttribute("aria-expanded", String(isOpen));
+    button.setAttribute("aria-expanded", String(isOpen));
     document.body.classList.toggle("menu-open", isOpen);
   });
 
