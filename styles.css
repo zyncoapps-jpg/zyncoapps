@@ -939,13 +939,17 @@ a {
   width: 31px;
   height: 31px;
   flex: 0 0 auto;
-  display: grid;
-  place-items: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 10px;
   color: var(--forest);
   background: var(--mint);
   font-size: 0.86rem;
   font-weight: 900;
+  line-height: 1;
+  margin-top: 0;
+  text-align: center;
 }
 
 .feature strong {
@@ -953,7 +957,7 @@ a {
   font-size: 0.9rem;
 }
 
-.feature span {
+.feature div span {
   display: block;
   margin-top: 4px;
   color: var(--ink-soft);
